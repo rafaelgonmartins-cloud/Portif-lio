@@ -1,0 +1,10 @@
+﻿node_modules/
+.system_generated/
+*.log
+
+# O GitHub possui limite estrito de 100MB por arquivo individual.
+# Ignoramos os arquivos brutos pesados (>100MB) para o push passar limpo e rápido no GitHub/Vercel:
+media/corpo_4.mp4
+media/jackson_teixeira_tumtum.mp4
+media/montagem_vilgner_tattoo_2_v02_1.mp4
+media/script_75_c0636_3.mp4

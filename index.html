@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor de Vídeo & Motion Designer // Portfólio</title>
+  <link rel="icon" type="image/png" href="assets/Digital.png" />
+
+  <!-- Google Fonts: Genos (Destaques), Outfit (Texto), Share Tech Mono & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Intro Screen (Video de Entrada Responsivo: Desktop vs Mobile) -->
+  <div id="intro-screen">
+    <div class="intro-video-container">
+      <video id="intro-video" class="intro-video" autoplay muted playsinline preload="auto">
+        <source id="intro-video-src" src="assets/loading_completo_desktop.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+      <button id="skip-intro" class="intro-skip-btn">
+        <i class="fa-solid fa-forward-step"></i> Pular Intro
+      </button>
+    </div>
+  </div>
+
+  <!-- Glowing background ambient lights -->
+  <div class="glow-orb glow-purple"></div>
+  <div class="glow-orb glow-cyan"></div>
+
+  <!-- Floating Navigation -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">
+      <img src="assets/Digital.png" alt="Logo" class="nav-logo-img">
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#showreel" class="nav-link">Showreel</a></li>
+      <li><a href="#projetos" class="nav-link">Projetos</a></li>
+      <li><a href="#skills" class="nav-link">Habilidades</a></li>
+      <li><a href="#workflow" class="nav-link">Processo</a></li>
+      <li><a href="#contato" class="nav-link">Contato</a></li>
+    </ul>
+
+    <a href="https://wa.me/5553991671680?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20edi%C3%A7%C3%A3o." target="_blank" class="nav-cta">
+      <i class="fa-brands fa-whatsapp"></i> Fazer Orçamento
+    </a>
+
+    <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>DISPONÍVEL PARA PROJETOS & FREELANCE</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-line line-thin">Transformando</span>
+          <span class="hero-title-line line-medium">Ideias Brutas em</span>
+          <span class="hero-title-line line-bold gradient-text">Vídeos Cinematográficos & Virais</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Especialista em edição de alto ritmo, retenção para criadores de conteúdo, comerciais e motion graphics com sound design imersivo.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#showreel" class="btn-primary">
+            <i class="fa-solid fa-play"></i> Assistir Destaque
+          </a>
+          <a href="#projetos" class="btn-secondary">
+            <i class="fa-solid fa-film"></i> Ver Todos os Projetos
+          </a>
+        </div>
+
+        <!-- NLE / Timeline Showcase Widget -->
+        <div class="nle-widget" id="showreel">
+          <div class="nle-header">
+            <div class="nle-window-controls">
+              <div class="nle-dot dot-red"></div>
+              <div class="nle-dot dot-yellow"></div>
+              <div class="nle-dot dot-green"></div>
+            </div>
+            <div class="nle-title">SEQUENCE: MASTER_SHOWREEL_FINAL_4K.PROJ</div>
+            <div class="nle-timecode" id="hero-timecode">00:00:00:00</div>
+          </div>
+
+          <div class="nle-preview-container" id="hero-player-box">
+            <video id="hero-video" class="nle-video" loop playsinline preload="metadata">
+              <source src="media/corpo_4.mp4" type="video/mp4">
+            </video>
+            <div class="nle-play-overlay" id="hero-overlay">
+              <div class="nle-play-btn">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.05em; color: #fff;">CLIQUE PARA REPRODUZIR COM SOM</span>
+            </div>
+          </div>
+
+          <div class="nle-timeline-tracks">
+            <div class="track-row">
+              <span class="track-label">V3</span>
+              <div class="track-content">
+                <div class="clip clip-v3">Motion Titles & Lower Thirds</div>
+              </div>
+            </div>
+            <div class="track-row">
+              <span class="track-label">V2</span>
+              <div class="track-content">
+                <div class="clip clip-v2">B-Roll & Overlays</div>
+                <div class="clip clip-v2" style="width: 25%">VFX Mask</div>
+              </div>
+            </div>
+            <div class="track-row">
+              <span class="track-label">V1</span>
+              <div class="track-content">
+                <div class="clip clip-v1">A-Roll Main Footage [4K 60FPS]</div>
+                <div class="clip clip-v1" style="width: 45%; background: rgba(59, 130, 246, 0.4); border-color: #3b82f6;">Cut 02 - Action Sequence</div>
+              </div>
+            </div>
+            <div class="track-row">
+              <span class="track-label">A1</span>
+              <div class="track-content">
+                <div class="clip clip-a1">Main Dialogue & Voiceover (Denoised)</div>
+              </div>
+            </div>
+            <div class="track-row">
+              <span class="track-label">A2</span>
+              <div class="track-content">
+                <div class="clip clip-a2">Sound FX / Whooshes / Impacts</div>
+                <div class="clip clip-a2" style="width: 50%; background: rgba(236, 72, 153, 0.35); border-color: #ec4899;">Cinematic Soundtrack</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics & Stats -->
+        <div class="stats-grid">
+          <div class="stat-card glass-panel">
+            <div class="stat-number">+350</div>
+            <div class="stat-label">Vídeos Finalizados</div>
+          </div>
+          <div class="stat-card glass-panel">
+            <div class="stat-number" style="font-size: 2.2rem; line-height: 1.3;">ALTA RETENÇÃO</div>
+            <div class="stat-label">Foco em Engajamento</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// PORTFÓLIO DE TRABALHOS</span>
+          <h2 class="section-title">Projetos Selecionados</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">Todos os Vídeos</button>
+          <button class="filter-btn" data-filter="reels">Reels & TikTok</button>
+          <button class="filter-btn" data-filter="youtube">YouTube & Long Form</button>
+          <button class="filter-btn" data-filter="commercial">Comercial & Cinema</button>
+          <button class="filter-btn" data-filter="motion">Motion & Storytelling</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Injetado dinamicamente via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// SOFTWARES & EXPERTISE</span>
+          <h2 class="section-title">Arsenal de Edição</h2>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-card glass-panel">
+            <div class="tool-icon"><i class="fa-solid fa-film"></i></div>
+            <div>
+              <div class="tool-name">Adobe Premiere Pro</div>
+              <div class="tool-desc">Edição profissional, cortes de alta precisão e sincronia.</div>
+            </div>
+          </div>
+
+          <div class="tool-card glass-panel">
+            <div class="tool-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div>
+              <div class="tool-name">Adobe After Effects</div>
+              <div class="tool-desc">Motion graphics, VFX, tracking e animações avançadas.</div>
+            </div>
+          </div>
+
+          <div class="tool-card glass-panel">
+            <div class="tool-icon"><i class="fa-solid fa-volume-high"></i></div>
+            <div>
+              <div class="tool-name">Sound Design & Mix</div>
+              <div class="tool-desc">Efeitos sonoros envolventes, EQ, compressão e mixagem.</div>
+            </div>
+          </div>
+
+          <div class="tool-card glass-panel">
+            <div class="tool-icon"><i class="fa-solid fa-image"></i></div>
+            <div>
+              <div class="tool-name">Adobe Photoshop</div>
+              <div class="tool-desc">Criação de thumbnails de alta conversão, tratamento e texturas.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="section" id="workflow">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// COMO FUNCIONA</span>
+          <h2 class="section-title">Meu Processo Criativo</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="workflow-card glass-panel">
+            <div class="workflow-step">01</div>
+            <h3 class="workflow-title">Briefing & Decupagem</h3>
+            <p class="workflow-text">Alinhamento de expectativas, estudo de referências, análise dos arquivos brutos e seleção dos melhores momentos.</p>
+          </div>
+
+          <div class="workflow-card glass-panel">
+            <div class="workflow-step">02</div>
+            <h3 class="workflow-title">Corte & Ritmo (Pacing)</h3>
+            <p class="workflow-text">Construção da narrativa eliminando pausas e ajustando o ritmo para prender a atenção do primeiro ao último segundo.</p>
+          </div>
+
+          <div class="workflow-card glass-panel">
+            <div class="workflow-step">03</div>
+            <h3 class="workflow-title">Motion & Sound Design</h3>
+            <p class="workflow-text">Adição de efeitos visuais, transições, animações de texto e sonoplastia milimétrica que dá vida à edição.</p>
+          </div>
+
+          <div class="workflow-card glass-panel">
+            <div class="workflow-step">04</div>
+            <h3 class="workflow-title">Color Grade & Entrega</h3>
+            <p class="workflow-text">Tratamento de cor cinematográfico, exportação nos formatos ideais e suporte para revisões até a aprovação 100%.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="contact-container glass-panel">
+          <div class="contact-info">
+            <span class="section-tag">// VAMOS TRABALHAR JUNTOS?</span>
+            <h2 class="contact-info-title">Pronto para elevar o nível dos seus vídeos?</h2>
+            <p class="contact-info-text">
+              Preencha o formulário para receber uma proposta personalizada ou entre em contato diretamente pelo WhatsApp para conversarmos sobre seu projeto.
+            </p>
+
+            <div class="contact-details">
+              <a href="https://wa.me/5553991671680?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20edi%C3%A7%C3%A3o." target="_blank" class="contact-item">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem; color: var(--accent-neon);"></i>
+                <span>WhatsApp: (53) 99167-1680</span>
+              </a>
+              <a href="mailto:contato@seueditor.com" class="contact-item">
+                <i class="fa-solid fa-envelope" style="font-size: 1.2rem; color: var(--accent-purple);"></i>
+                <span>contato@seueditor.com</span>
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Seu Nome / Nome do Canal</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Ex: Lucas Silva" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Tipo de Projeto</label>
+              <select id="form-type" class="form-select" required>
+                <option value="Reels / TikTok / Shorts">Reels / TikTok / Shorts (Vídeo Vertical)</option>
+                <option value="Vídeo para YouTube">Vídeo Longo para YouTube</option>
+                <option value="Vídeo Comercial / Anúncio">Vídeo Comercial / Anúncio (Vsl / Ads)</option>
+                <option value="Motion Graphics / Animação">Motion Graphics / Animação</option>
+                <option value="Pacote Mensal de Edição">Pacote Mensal de Edição</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Volume ou Detalhes do Projeto</label>
+              <textarea id="form-msg" class="form-textarea" rows="3" placeholder="Ex: Preciso de 8 reels por mês com estilo dinâmico..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="video-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Título do Vídeo</h3>
+        <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-video-wrapper">
+        <video id="modal-video-player" class="modal-video" controls playsinline>
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+      <div class="modal-details" id="modal-details">
+        Descrição e detalhes técnicos...
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <img src="assets/Digital.png" alt="Logo" class="footer-logo">
+      <p class="footer-text">© 2026 Portfólio de Edição de Vídeo & Motion Design. Todos os direitos reservados.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/5553991671680" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
