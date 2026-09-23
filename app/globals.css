@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Fontes servidas junto com o site (nada de Google Fonts em tempo de execução).
+   Genos é a mesma letra do logo; Outfit fica no texto corrido. Só o subconjunto latino. */
+@import "@fontsource/genos/latin-500.css";
+@import "@fontsource/genos/latin-600.css";
+@import "@fontsource/genos/latin-700.css";
+@import "@fontsource/outfit/latin-400.css";
+@import "@fontsource/outfit/latin-500.css";
+@import "@fontsource/outfit/latin-600.css";
+
+@theme {
+  /* Cores tiradas do logo Martins Vídeo, em fundo escuro para o vídeo aparecer. */
+  --color-fundo: #120b19;
+  --color-palco: #1b1225;
+  --color-linha: #33243f;
+  --color-texto: #f6f0f8;
+  --color-apoio: #c3b3cf;
+  --color-roxo: #6a3a91;
+  --color-roxo-escuro: #3f2257;
+  --color-laranja: #eb5e28;
+  --color-laranja-claro: #ff7a45;
+  /* Fundo de botão com texto branco: o laranja do logo dá 3,4:1; este dá 4,75:1 (WCAG AA). */
+  --color-laranja-botao: #c9481a;
+  --color-laranja-botao-hover: #b83f12;
+
+  --font-titulo: "Genos", "Outfit", sans-serif;
+  --font-texto: "Outfit", system-ui, sans-serif;
+
+  --ease-saida: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-fundo);
+    color-scheme: dark;
+    scrollbar-color: var(--color-roxo) var(--color-fundo);
+  }
+  body {
+    font-family: var(--font-texto);
+    color: var(--color-texto);
+    background: var(--color-fundo);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "tnum" 0;
+  }
+  a { color: inherit; text-underline-offset: 0.2em; }
+  ::selection { background: var(--color-laranja); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-laranja-claro); outline-offset: 3px; border-radius: 4px; }
+  input, textarea, select { caret-color: var(--color-laranja); }
+  h1, h2, h3 { font-family: var(--font-titulo); text-wrap: balance; letter-spacing: -0.01em; }
+  [id] { scroll-margin-top: 5rem; }
+}
+
+@layer components {
+  .botao {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    min-height: 3rem; padding: 0 1.4rem; border-radius: 999px;
+    font-weight: 600; white-space: nowrap;
+    transition: background-color 200ms var(--ease-saida), transform 200ms var(--ease-saida), box-shadow 200ms var(--ease-saida);
+  }
+  .botao-principal {
+    background: var(--color-laranja-botao); color: #fff;
+    box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.7);
+  }
+  .botao-principal:hover { background: var(--color-laranja-botao-hover); transform: translateY(-1px); }
+  .botao-secundario { border: 1px solid var(--color-linha); color: var(--color-texto); }
+  .botao-secundario:hover { border-color: var(--color-apoio); }
+  .campo {
+    width: 100%; border-radius: 12px; background: var(--color-fundo);
+    border: 1px solid var(--color-linha); padding: 0.8rem 1rem; color: var(--color-texto);
+    transition: border-color 150ms;
+  }
+  .campo::placeholder { color: #8f7e9c; }
+  .campo:focus { outline: none; border-color: var(--color-laranja); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,64 @@
+{
+  "vilgner-setembro": {
+    "completo": true,
+    "largura": 1080,
+    "altura": 1920,
+    "duracao": 33.8,
+    "mb": 20,
+    "previaMb": 0.8
+  },
+  "droplatam-89": {
+    "completo": true,
+    "largura": 1080,
+    "altura": 1920,
+    "duracao": 40.3,
+    "mb": 20.1,
+    "previaMb": 0.6
+  },
+  "corpo-4": {
+    "completo": false,
+    "largura": 480,
+    "altura": 854,
+    "duracao": null,
+    "mb": null,
+    "previaMb": 0.8
+  },
+  "vilgner-aula": {
+    "completo": false,
+    "largura": 480,
+    "altura": 854,
+    "duracao": null,
+    "mb": null,
+    "previaMb": 0.5
+  },
+  "droplatam-82": {
+    "completo": true,
+    "largura": 1080,
+    "altura": 1920,
+    "duracao": 49.7,
+    "mb": 17.5,
+    "previaMb": 0.4
+  },
+  "jackson-teixeira": {
+    "completo": false,
+    "largura": 854,
+    "altura": 480,
+    "duracao": null,
+    "mb": null,
+    "previaMb": 0.2
+  },
+  "droplatam-75": {
+    "completo": false,
+    "largura": 480,
+    "altura": 854,
+    "duracao": null,
+    "mb": null,
+    "previaMb": 0.4
+  },
+  "_destaque": {
+    "id": "vilgner-setembro",
+    "largura": 720,
+    "altura": 1280,
+    "mb": 3.1
+  }
+}
