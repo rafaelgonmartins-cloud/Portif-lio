@@ -1,5 +1,5 @@
 import { CNPJ, INSTAGRAM, MARCA, WHATS_TEXTO, ZAP_ORCAMENTO } from "./dados";
-import { Estrela, IconeInsta, IconeSeta, IconeWhats } from "./icones";
+import { IconeInsta, IconeWhats } from "./icones";
 
 const SECOES = [
   { href: "#trabalhos", nome: "Trabalhos" },
@@ -23,8 +23,7 @@ function MarcaPoliaTech({ className }: { className?: string }) {
   );
 }
 
-/* Rodapé em duas partes: a ficha do site (marca, seções, contato) e, embaixo, os créditos
-   finais, como no fim de um vídeo. É ali que entra a PoliaTech. */
+/* Rodapé: marca, seções e contato; na linha final, CNPJ e o crédito da PoliaTech. */
 export default function Rodape() {
   const ano = new Date().getFullYear();
   return (
@@ -79,35 +78,25 @@ export default function Rodape() {
           </div>
         </div>
 
-        {/* Créditos finais */}
-        <div className="mt-16 border-t border-linha pt-10 md:mt-20">
-          <Estrela className="mx-auto h-4 w-4 text-laranja" />
-          <dl className="mx-auto mt-6 grid max-w-md grid-cols-[1fr_1fr] gap-x-6 gap-y-3 text-sm">
-            <dt className="text-right text-apoio">Roteiro, edição e motion</dt>
-            <dd className="font-semibold">Rafael Martins</dd>
-            <dt className="text-right text-apoio">Site</dt>
-            <dd>
-              <a
-                href={POLIATECH}
-                target="_blank"
-                rel="noopener"
-                aria-label="PoliaTech, empresa que fez este site"
-                className="group -my-2 inline-flex min-h-10 items-center text-texto/80 transition-colors hover:text-texto"
-              >
-                <MarcaPoliaTech className="h-[15px] w-auto" />
-                <IconeSeta className="ml-2 h-3.5 w-3.5 -rotate-45 text-apoio transition-transform duration-200 group-hover:translate-x-0.5" />
-              </a>
-            </dd>
-          </dl>
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-linha/60 py-6 text-sm text-apoio">
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-linha/60 py-6 text-sm text-apoio">
           <p>
             {MARCA}, {ano}. CNPJ {CNPJ}. Todos os direitos reservados.
           </p>
-          <a href="#topo" className="inline-flex min-h-10 items-center hover:text-texto">
-            Voltar ao topo
-          </a>
+          <div className="flex flex-wrap items-center gap-x-6">
+            <a
+              href={POLIATECH}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex min-h-10 items-center gap-2 transition-colors hover:text-texto"
+            >
+              Site feito pela
+              <MarcaPoliaTech className="h-3 w-auto translate-y-px" />
+              <span className="sr-only">PoliaTech</span>
+            </a>
+            <a href="#topo" className="inline-flex min-h-10 items-center hover:text-texto">
+              Voltar ao topo
+            </a>
+          </div>
         </div>
       </div>
     </footer>
