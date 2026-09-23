@@ -1,4 +1,6 @@
+import Arsenal from "./Arsenal";
 import Contato from "./Contato";
+import Processo from "./Processo";
 import { DESTAQUE, INSTAGRAM, MARCA, TODOS, TRABALHOS, WHATS_TEXTO, ZAP_ORCAMENTO } from "./dados";
 import { Estrela, IconeInsta, IconeSeta, IconeWhats } from "./icones";
 import { Destaque, Grade, Tela, VerExemplo } from "./Videos";
@@ -32,12 +34,6 @@ const SERVICOS = [
   },
 ];
 
-const PASSOS = [
-  { titulo: "Material e referências", texto: "Você manda o bruto e os vídeos que gosta. Eu assisto tudo e separo os melhores momentos." },
-  { titulo: "Corte e ritmo", texto: "Monto a história tirando as pausas e ajusto o ritmo para prender a atenção até o último segundo." },
-  { titulo: "Motion e som", texto: "Entram transições, texto animado, efeito visual e sonoplastia." },
-  { titulo: "Cor e entrega", texto: "Trato a cor, exporto no formato de cada rede e ajusto até você aprovar." },
-];
 
 export default function Home() {
   const completos = new Set(TODOS.filter((t) => t.completo).map((t) => t.id));
@@ -52,8 +48,8 @@ export default function Home() {
           <nav aria-label="Seções" className="hidden items-center gap-7 text-sm text-apoio md:flex">
             <a href="#trabalhos" className="py-3 hover:text-texto">Trabalhos</a>
             <a href="#servicos" className="py-3 hover:text-texto">O que eu edito</a>
+            <a href="#processo" className="py-3 hover:text-texto">Processo</a>
             <a href="#quem-edita" className="py-3 hover:text-texto">Quem edita</a>
-            <a href="#como-funciona" className="py-3 hover:text-texto">Como funciona</a>
           </nav>
           <a href={ZAP_ORCAMENTO} target="_blank" rel="noopener" className="botao botao-principal min-h-10 px-4 text-sm">
             <IconeWhats className="h-5 w-5" />
@@ -118,6 +114,16 @@ export default function Home() {
           </ul>
         </section>
 
+        {/* Arsenal e processo formam uma faixa só, como a tela de um programa de edição */}
+        <section id="arsenal" className="border-t border-linha/70 bg-palco/40">
+          <div className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 md:pt-24">
+            <Arsenal />
+          </div>
+          <div id="processo" className="mx-auto max-w-6xl px-4 pb-16 pt-20 sm:px-6 md:pb-24 md:pt-28">
+            <Processo />
+          </div>
+        </section>
+
         <section id="quem-edita" className="border-t border-linha/70">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-[minmax(0,20rem)_1fr] md:gap-16 md:py-24">
             <img
@@ -148,26 +154,6 @@ export default function Home() {
                 inteligência artificial.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section id="como-funciona" className="border-t border-linha/70 bg-palco/40">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-            <h2 className="text-4xl font-semibold sm:text-5xl">Como funciona</h2>
-            <ol className="mt-10 grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-4">
-              {PASSOS.map((p, i) => (
-                <li key={p.titulo}>
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-9 w-9 place-items-center rounded-full bg-laranja-botao text-base font-semibold tabular-nums text-white">
-                      {i + 1}
-                    </span>
-                    <span aria-hidden className="h-px flex-1 bg-linha" />
-                  </div>
-                  <h3 className="mt-5 text-2xl font-semibold">{p.titulo}</h3>
-                  <p className="mt-2 leading-relaxed text-apoio">{p.texto}</p>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
 
