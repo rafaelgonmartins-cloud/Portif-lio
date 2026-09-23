@@ -1,5 +1,5 @@
 {
-  "vilgner-setembro": {
+  "vilgner-processo": {
     "completo": true,
     "largura": 1080,
     "altura": 1920,
@@ -7,58 +7,66 @@
     "mb": 20,
     "previaMb": 0.8
   },
-  "droplatam-89": {
+  "droplatam-2": {
     "completo": true,
     "largura": 1080,
     "altura": 1920,
     "duracao": 40.3,
-    "mb": 20.1,
+    "mb": 20.4,
     "previaMb": 0.6
   },
-  "corpo-4": {
-    "completo": false,
-    "largura": 480,
-    "altura": 854,
-    "duracao": null,
-    "mb": null,
-    "previaMb": 0.8
-  },
   "vilgner-aula": {
-    "completo": false,
-    "largura": 480,
-    "altura": 854,
-    "duracao": null,
-    "mb": null,
-    "previaMb": 0.5
+    "completo": true,
+    "largura": 2160,
+    "altura": 3840,
+    "duracao": 48.7,
+    "mb": 28.4,
+    "previaMb": 0.7
   },
-  "droplatam-82": {
+  "droplatam-5": {
+    "completo": true,
+    "largura": 1080,
+    "altura": 1920,
+    "duracao": 68.6,
+    "mb": 28.3,
+    "previaMb": 0.4
+  },
+  "jackson-teixeira": {
+    "completo": true,
+    "largura": 1920,
+    "altura": 1080,
+    "duracao": 191.8,
+    "mb": 37.6,
+    "previaMb": 0.4
+  },
+  "droplatam-3": {
     "completo": true,
     "largura": 1080,
     "altura": 1920,
     "duracao": 49.7,
-    "mb": 17.5,
+    "mb": 18.3,
     "previaMb": 0.4
   },
-  "jackson-teixeira": {
-    "completo": false,
-    "largura": 854,
-    "altura": 480,
-    "duracao": null,
-    "mb": null,
-    "previaMb": 0.2
+  "destaque": {
+    "completo": true,
+    "largura": 1080,
+    "altura": 1920,
+    "duracao": 39.4,
+    "mb": 23,
+    "previaMb": 0.7
   },
-  "droplatam-75": {
-    "completo": false,
-    "largura": 480,
-    "altura": 854,
-    "duracao": null,
-    "mb": null,
-    "previaMb": 0.4
+  "droplatam-1": {
+    "completo": true,
+    "largura": 1080,
+    "altura": 1920,
+    "duracao": 435.2,
+    "mb": 45.4,
+    "previaMb": 0.5
   },
   "_destaque": {
-    "id": "vilgner-setembro",
+    "id": "destaque",
     "largura": 720,
     "altura": 1280,
-    "mb": 3.1
+    "mb": 2.3
   }
 }

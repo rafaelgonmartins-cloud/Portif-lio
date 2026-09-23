@@ -1,5 +1,5 @@
 import Contato from "./Contato";
-import { DESTAQUE, INSTAGRAM, MARCA, TRABALHOS, WHATS_TEXTO, ZAP_ORCAMENTO } from "./dados";
+import { DESTAQUE, INSTAGRAM, MARCA, TODOS, TRABALHOS, WHATS_TEXTO, ZAP_ORCAMENTO } from "./dados";
 import { Estrela, IconeInsta, IconeSeta, IconeWhats } from "./icones";
 import { Destaque, Grade, Tela, VerExemplo } from "./Videos";
 
@@ -8,22 +8,27 @@ const SERVICOS = [
   {
     titulo: "Reels, TikTok e Shorts",
     texto: "Vídeo vertical com gancho logo no começo, corte rápido e legenda animada para segurar quem está rolando o feed.",
-    exemplo: "vilgner-setembro",
+    exemplo: "vilgner-processo",
   },
   {
     titulo: "Infoproduto e anúncio",
     texto: "Roteiro falado com cenas de apoio, ícones e legenda. Serve para orgânico e para tráfego pago.",
-    exemplo: "droplatam-89",
+    exemplo: "droplatam-2",
+  },
+  {
+    titulo: "Vídeo longo",
+    texto: "Aula, bastidor ou vídeo para YouTube, com tela gravada, cortes e legenda do começo ao fim.",
+    exemplo: "droplatam-1",
   },
   {
     titulo: "Clipe musical",
-    texto: "Montagem no tempo da música, com tratamento de cor e efeito onde a batida pede.",
+    texto: "Montagem no tempo da música, com tratamento de cor e elementos animados onde a batida pede.",
     exemplo: "jackson-teixeira",
   },
   {
     titulo: "Motion e efeito visual",
-    texto: "Texto animado, máscara, rastreamento e VFX feitos no After Effects.",
-    exemplo: "corpo-4",
+    texto: "Texto animado, gráficos, máscara, rastreamento e VFX feitos no After Effects.",
+    exemplo: "droplatam-5",
   },
 ];
 
@@ -35,18 +40,19 @@ const PASSOS = [
 ];
 
 export default function Home() {
-  const completos = new Set(TRABALHOS.filter((t) => t.completo).map((t) => t.id));
+  const completos = new Set(TODOS.filter((t) => t.completo).map((t) => t.id));
 
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-linha/70 bg-fundo/95">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <a href="#topo" aria-label={`${MARCA}, início`} className="shrink-0">
-            <img src="/marca/logo-escuro.webp" alt={MARCA} width={640} height={292} className="h-9 w-auto" />
+            <img src="/marca/logo-escuro-200.webp" srcSet="/marca/logo-escuro-100.webp 1x, /marca/logo-escuro-200.webp 2x, /marca/logo-escuro-300.webp 3x" alt={MARCA} width={79} height={36} className="h-9 w-auto" />
           </a>
           <nav aria-label="Seções" className="hidden items-center gap-7 text-sm text-apoio md:flex">
             <a href="#trabalhos" className="py-3 hover:text-texto">Trabalhos</a>
             <a href="#servicos" className="py-3 hover:text-texto">O que eu edito</a>
+            <a href="#quem-edita" className="py-3 hover:text-texto">Quem edita</a>
             <a href="#como-funciona" className="py-3 hover:text-texto">Como funciona</a>
           </nav>
           <a href={ZAP_ORCAMENTO} target="_blank" rel="noopener" className="botao botao-principal min-h-10 px-4 text-sm">
@@ -72,7 +78,7 @@ export default function Home() {
                 Reels, anúncios, vídeos de infoproduto e clipes. Corte no ritmo, legenda animada, efeito visual e
                 sonoplastia, do bruto até o arquivo pronto para postar.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
                 <a href={ZAP_ORCAMENTO} target="_blank" rel="noopener" className="botao botao-principal">
                   <IconeWhats className="h-5 w-5" /> Pedir orçamento
                 </a>
@@ -110,6 +116,32 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section id="quem-edita" className="border-t border-linha/70">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-[minmax(0,20rem)_1fr] md:gap-16 md:py-24">
+            <img
+              src="/rafael-800.webp"
+              srcSet="/rafael-400.webp 400w, /rafael-800.webp 800w"
+              sizes="320px"
+              alt="Rafael, editor da Martins Vídeo"
+              width={800}
+              height={800}
+              loading="lazy"
+              decoding="async"
+              className="aspect-square w-full max-w-[20rem] rounded-2xl object-cover shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)]"
+            />
+            <div>
+              <h2 className="text-4xl font-semibold sm:text-5xl">Quem edita</h2>
+              <p className="mt-5 max-w-[36rem] text-lg leading-relaxed text-apoio">
+                Sou o Rafael, da Martins Vídeo. Videomaker, motion designer e artista de VFX.
+              </p>
+              <p className="mt-4 max-w-[36rem] text-lg leading-relaxed text-apoio">
+                Edito em português e em espanhol (os vídeos da DropLatam aqui são todos em espanhol). Também montei
+                os vídeos do estúdio Vilgner Tattoo e o clipe do Jackson Teixeira.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section id="como-funciona" className="border-t border-linha/70 bg-palco/40">
@@ -155,12 +187,12 @@ export default function Home() {
 
       <footer className="border-t border-linha/70">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-8 text-sm text-apoio sm:px-6">
-          <img src="/marca/logo-escuro.webp" alt={MARCA} width={640} height={292} className="h-8 w-auto" />
+          <img src="/marca/logo-escuro-200.webp" srcSet="/marca/logo-escuro-100.webp 1x, /marca/logo-escuro-200.webp 2x" alt={MARCA} width={71} height={32} loading="lazy" className="h-8 w-auto" />
           <p>{MARCA}, {new Date().getFullYear()}</p>
         </div>
       </footer>
 
-      <Tela itens={TRABALHOS} />
+      <Tela itens={TODOS} />
     </>
   );
 }

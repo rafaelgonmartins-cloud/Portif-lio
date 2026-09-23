@@ -24,6 +24,12 @@ export const viewport: Viewport = { themeColor: "#120b19" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* As fontes da primeira tela chegam antes do texto aparecer (evita o texto pular). */}
+        <link rel="preload" href="/fonts/genos-latin-600-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/outfit-latin-600-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
+      </head>
       <body>{children}</body>
     </html>
   );

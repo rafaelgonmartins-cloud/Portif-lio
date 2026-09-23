@@ -16,6 +16,7 @@ export const ZAP_ORCAMENTO = zap("Olá! Vi seu portfólio e quero um orçamento 
 
 export type Trabalho = {
   id: string;
+  grade: boolean;
   cliente: string;
   tipo: string;
   descricao: string;
@@ -28,10 +29,11 @@ type Info = { completo: boolean; largura: number; altura: number; duracao: numbe
 const info = manifesto as unknown as Record<string, Info>;
 
 // Só entra na página o que tem pelo menos a prévia gerada.
-export const TRABALHOS: Trabalho[] = dados.trabalhos
+export const TODOS: Trabalho[] = dados.trabalhos
   .filter((t) => info[t.id])
   .map((t) => ({
     id: t.id,
+    grade: (t as { grade?: boolean }).grade !== false,
     cliente: t.cliente,
     tipo: t.tipo,
     descricao: t.descricao,
@@ -40,4 +42,6 @@ export const TRABALHOS: Trabalho[] = dados.trabalhos
     duracao: info[t.id].duracao,
   }));
 
-export const DESTAQUE = TRABALHOS.find((t) => t.id === dados.destaque.id) ?? null;
+// Na grade só entra o que não tem "grade": false (o vídeo em destaque abre pelo topo).
+export const TRABALHOS = TODOS.filter((t) => t.grade);
+export const DESTAQUE = TODOS.find((t) => t.id === dados.destaque.id) ?? null;

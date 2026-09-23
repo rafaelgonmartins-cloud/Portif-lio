@@ -1,74 +1,79 @@
 {
-  "_leia": "Lista dos trabalhos do portfólio, na ordem da página. 'original' é o nome do arquivo na pasta de originais; o script scripts/preparar-videos.mjs gera public/videos/<id>.mp4, <id>-previa.mp4 e <id>.webp. Campo 'confirmar' lista o que o Rafael ainda precisa confirmar.",
+  "_leia": "Lista dos trabalhos do portfólio, na ordem da página. 'original' é o nome do arquivo na pasta de originais; o script scripts/preparar-videos.mjs gera public/videos/<id>.mp4, <id>-previa.mp4 e <id>.webp. 'grade: false' tira o item da grade (ele só abre por outro botão). 'confirmar' lista o que o Rafael ainda precisa confirmar.",
   "destaque": {
-    "id": "vilgner-setembro",
-    "inicio": 18,
-    "duracao": 14,
-    "_leia": "Trecho do vídeo que roda mudo no topo. Provisório até chegar o showreel."
+    "id": "destaque",
+    "inicio": 0,
+    "duracao": 12,
+    "_leia": "Trecho do vídeo 'destaque' que roda mudo no topo. 'Assistir com som' abre o vídeo inteiro."
   },
   "trabalhos": [
     {
-      "id": "vilgner-setembro",
-      "original": "vilgner_setembro_24.mp4",
+      "id": "destaque",
+      "original": "VÍDEO EM DESTAQUE.mp4",
+      "cliente": "Vídeo em destaque",
+      "tipo": "Reels",
+      "descricao": "Roteiro falado com legenda animada e ícones, em português.",
+      "grade": false,
+      "confirmar": ["cliente", "descrição"]
+    },
+    {
+      "id": "vilgner-processo",
+      "original": "Vilgner Tattoo 2.mp4",
       "cliente": "Vilgner Tattoo",
       "tipo": "Reels de estúdio",
-      "formato": "vertical",
       "descricao": "Do desenho no papel à tatuagem pronta, em 34 segundos.",
-      "confirmar": ["nome do cliente", "descrição"]
+      "confirmar": ["descrição"]
     },
     {
-      "id": "droplatam-89",
-      "original": "scrip_89_c0681_1.mp4",
+      "id": "droplatam-2",
+      "original": "DropLatam 2.mp4",
       "cliente": "DropLatam",
       "tipo": "Vídeo de infoproduto",
-      "formato": "vertical",
-      "descricao": "Roteiro falado com legenda animada e cenas de apoio, em espanhol.",
-      "confirmar": ["nome do cliente", "descrição"]
-    },
-    {
-      "id": "corpo-4",
-      "original": "corpo_4.mp4",
-      "cliente": "Anúncio",
-      "tipo": "Motion com texto",
-      "formato": "vertical",
-      "descricao": "Texto animado sobre imagem, ritmo de anúncio.",
-      "confirmar": ["cliente", "descrição", "original"]
-    },
-    {
-      "id": "vilgner-aula",
-      "original": "montagem_vilgner_tattoo_2_v02_1.mp4",
-      "cliente": "Vilgner Tattoo",
-      "tipo": "Conteúdo de curso",
-      "formato": "vertical",
-      "descricao": "Aula no estúdio montada para Reels.",
-      "confirmar": ["descrição", "original"]
-    },
-    {
-      "id": "droplatam-82",
-      "original": "script_82_c0640_1.mp4",
-      "cliente": "DropLatam",
-      "tipo": "Vídeo de infoproduto",
-      "formato": "vertical",
       "descricao": "Roteiro falado com legenda animada e cenas de apoio, em espanhol.",
       "confirmar": ["descrição"]
     },
     {
-      "id": "jackson-teixeira",
-      "original": "jackson_teixeira_tumtum.mp4",
-      "cliente": "Jackson Teixeira",
-      "tipo": "Clipe",
-      "formato": "horizontal",
-      "descricao": "Clipe musical \"Tum Tum\".",
-      "confirmar": ["nome da música", "descrição", "original"]
+      "id": "vilgner-aula",
+      "original": "Vilgner tattoo.mp4",
+      "previaInicio": 20,
+      "cliente": "Vilgner Tattoo",
+      "tipo": "Aula e tatuagem",
+      "descricao": "Da explicação no quadro à tatuagem terminada. Gravado em 4K.",
+      "confirmar": ["descrição"]
     },
     {
-      "id": "droplatam-75",
-      "original": "script_75_c0636_3.mp4",
+      "id": "droplatam-5",
+      "original": "DropLatam 5.mp4",
+      "cliente": "DropLatam",
+      "tipo": "Motion e tela gravada",
+      "descricao": "Gráficos animados, telas do app e texto na tela, em espanhol.",
+      "confirmar": ["descrição"]
+    },
+    {
+      "id": "jackson-teixeira",
+      "original": "jackson teixeira.mp4",
+      "previaInicio": 20,
+      "cliente": "Jackson Teixeira",
+      "tipo": "Clipe",
+      "descricao": "Clipe musical com elementos animados sobre fundo branco.",
+      "confirmar": ["nome da música", "descrição"]
+    },
+    {
+      "id": "droplatam-3",
+      "original": "DropLatam 3.mp4",
       "cliente": "DropLatam",
       "tipo": "Vídeo de infoproduto",
-      "formato": "vertical",
-      "descricao": "Legenda animada e ícones para explicar o produto.",
-      "confirmar": ["descrição", "original"]
+      "descricao": "Legenda animada, ícones e cenas de apoio, em espanhol.",
+      "confirmar": ["descrição"]
+    },
+    {
+      "id": "droplatam-1",
+      "original": "DropLatam 1.mp4",
+      "previaInicio": 5,
+      "cliente": "DropLatam",
+      "tipo": "Vídeo longo",
+      "descricao": "Sete minutos com tela gravada, cortes e legenda, em espanhol.",
+      "confirmar": ["descrição"]
     }
   ]
 }
