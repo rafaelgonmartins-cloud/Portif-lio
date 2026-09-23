@@ -1,6 +1,7 @@
 import Arsenal from "./Arsenal";
 import Contato from "./Contato";
 import Processo from "./Processo";
+import Rodape from "./Rodape";
 import { DESTAQUE, INSTAGRAM, MARCA, TODOS, TRABALHOS, WHATS_TEXTO, ZAP_ORCAMENTO } from "./dados";
 import { Estrela, IconeInsta, IconeSeta, IconeWhats } from "./icones";
 import { Destaque, Grade, Tela, VerExemplo } from "./Videos";
@@ -149,7 +150,7 @@ export default function Home() {
                 produção de vídeos de grande alcance para empresas de pequeno, médio e grande porte.
               </p>
               <p className="mt-4 max-w-[38rem] text-lg leading-relaxed text-apoio">
-                Concluiu cursos pela Brainstorm Academy e pela Escola do VFX. Hoje é especialista em captação, edição
+                Concluiu cursos pela Brainstorm Academy e pela Escola do VFX. Hoje é roteirista e especialista em captação, edição
                 de vídeo, colorização, motion design e efeitos especiais, e segue ampliando os estudos em
                 inteligência artificial.
               </p>
@@ -178,12 +179,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-linha/70">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-8 text-sm text-apoio sm:px-6">
-          <img src="/marca/logo-escuro-200.webp" srcSet="/marca/logo-escuro-100.webp 1x, /marca/logo-escuro-200.webp 2x" alt={MARCA} width={71} height={32} loading="lazy" className="h-8 w-auto" />
-          <p>{MARCA}, {new Date().getFullYear()}</p>
-        </div>
-      </footer>
+      <Rodape />
 
       <Tela itens={TODOS} />
     </>

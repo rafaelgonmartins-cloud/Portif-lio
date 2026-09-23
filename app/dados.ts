@@ -3,6 +3,7 @@ import dados from "../trabalhos.json";
 import manifesto from "../public/videos/manifesto.json";
 
 export const MARCA = "Martins Vídeo";
+export const CNPJ = "47.765.456/0001-06";
 export const WHATS = "5553991671680";
 export const WHATS_TEXTO = "(53) 99167-1680";
 export const INSTAGRAM = "https://www.instagram.com/martins.video/";
