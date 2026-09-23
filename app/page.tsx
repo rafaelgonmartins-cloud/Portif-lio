@@ -75,8 +75,8 @@ export default function Home() {
                 Edição de vídeo e motion design
               </h1>
               <p className="mt-5 max-w-[34rem] text-lg leading-relaxed text-apoio">
-                Reels, anúncios, vídeos de infoproduto e clipes. Corte no ritmo, legenda animada, efeito visual e
-                sonoplastia, do bruto até o arquivo pronto para postar.
+                Reels, anúncios, vídeos de infoproduto e clipes. Da captação ao arquivo pronto para postar: corte no
+                ritmo, legenda animada, cor, motion e efeito visual.
               </p>
               <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
                 <a href={ZAP_ORCAMENTO} target="_blank" rel="noopener" className="botao botao-principal">
@@ -88,7 +88,7 @@ export default function Home() {
               </div>
               <p className="mt-8 flex items-center gap-2 text-sm text-apoio">
                 <Estrela className="h-3.5 w-3.5 text-laranja" />
-                Edito no Premiere Pro e no After Effects
+                Rafael Martins, editando vídeo desde 2013
               </p>
             </div>
             {DESTAQUE && <Destaque t={DESTAQUE} />}
@@ -124,7 +124,7 @@ export default function Home() {
               src="/rafael-800.webp"
               srcSet="/rafael-400.webp 400w, /rafael-800.webp 800w"
               sizes="320px"
-              alt="Rafael, editor da Martins Vídeo"
+              alt="Rafael Martins, fundador da Martins Vídeo"
               width={800}
               height={800}
               loading="lazy"
@@ -133,12 +133,19 @@ export default function Home() {
             />
             <div>
               <h2 className="text-4xl font-semibold sm:text-5xl">Quem edita</h2>
-              <p className="mt-5 max-w-[36rem] text-lg leading-relaxed text-apoio">
-                Sou o Rafael, da Martins Vídeo. Videomaker, motion designer e artista de VFX.
+              <p className="mt-5 text-xl font-semibold">
+                Rafael Martins<span className="font-normal text-apoio">, fundador da Martins Vídeo</span>
               </p>
-              <p className="mt-4 max-w-[36rem] text-lg leading-relaxed text-apoio">
-                Edito em português e em espanhol (os vídeos da DropLatam aqui são todos em espanhol). Também montei
-                os vídeos do estúdio Vilgner Tattoo e o clipe do Jackson Teixeira.
+              {/* Texto do próprio Rafael (enviado em 23/09/2026). */}
+              <p className="mt-4 max-w-[38rem] text-lg leading-relaxed text-apoio">
+                Desde 2013, Rafael aprendeu de forma autodidata tudo o que aplica em seu trabalho. Sua experiência,
+                criatividade e curiosidade foram o motor que ele utilizou para entender como trazer resultados na
+                produção de vídeos de grande alcance para empresas de pequeno, médio e grande porte.
+              </p>
+              <p className="mt-4 max-w-[38rem] text-lg leading-relaxed text-apoio">
+                Concluiu cursos pela Brainstorm Academy e pela Escola do VFX. Hoje é especialista em captação, edição
+                de vídeo, colorização, motion design e efeitos especiais, e segue ampliando os estudos em
+                inteligência artificial.
               </p>
             </div>
           </div>

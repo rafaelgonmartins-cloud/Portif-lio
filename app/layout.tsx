@@ -3,7 +3,7 @@ import "./globals.css";
 import { SITE } from "./dados";
 
 const descricao =
-  "Edição de Reels, anúncios, vídeos de infoproduto e clipes, com motion design, legenda animada e sonoplastia. Orçamento pelo WhatsApp.";
+  "Rafael Martins edita vídeo desde 2013: Reels, anúncios, vídeos de infoproduto e clipes, com motion design, cor e efeitos especiais. Orçamento pelo WhatsApp.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
